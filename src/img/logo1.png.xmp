@@ -11,16 +11,16 @@
    xmp:Rating="1"
    xmpMM:DerivedFrom="logo1.png"
    darktable:import_timestamp="63853022107199510"
-   darktable:change_timestamp="-1"
-   darktable:export_timestamp="-1"
+   darktable:change_timestamp="63853022637091969"
+   darktable:export_timestamp="63853022641412279"
    darktable:print_timestamp="-1"
    darktable:xmp_version="5"
    darktable:raw_params="0"
    darktable:auto_presets_applied="1"
-   darktable:history_end="4"
+   darktable:history_end="5"
    darktable:iop_order_version="3"
    darktable:history_basic_hash="1663e5c4cc578a160572020bfe88eb58"
-   darktable:history_current_hash="1663e5c4cc578a160572020bfe88eb58">
+   darktable:history_current_hash="4e896fcdb1c51c5d532e619cb27c5ea8">
    <darktable:masks_history>
     <rdf:Seq/>
    </darktable:masks_history>
@@ -66,6 +66,17 @@
       darktable:modversion="2"
       darktable:params="ffffffff"
       darktable:multi_name="auto"
+      darktable:multi_name_hand_edited="0"
+      darktable:multi_priority="0"
+      darktable:blendop_version="13"
+      darktable:blendop_params="gz12eJxjYIAACQYYOOHEgAZY0QVwggZ7CB6pfOqC/0AAogFpBh0E"/>
+     <rdf:li
+      darktable:num="4"
+      darktable:operation="crop"
+      darktable:enabled="1"
+      darktable:modversion="1"
+      darktable:params="000000000000403e0000803f0000503f0a00000010000000"
+      darktable:multi_name=""
       darktable:multi_name_hand_edited="0"
       darktable:multi_priority="0"
       darktable:blendop_version="13"
