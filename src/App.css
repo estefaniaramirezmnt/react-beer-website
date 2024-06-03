@@ -1,12 +1,25 @@
 /* Header */
 
 header {
-  align-items: center;
-  background-color: rgb(225, 161, 11);
+    align-items: center;
+    background-color: rgb(225, 161, 11);
+    padding: 35px;
 }
 
 .beer-logo {
     display: block;
     margin: 0 auto;
-    max-width: 300px;
+    max-width: 350px;
+}
+
+/*Media querie */
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    .beer-logo {
+        max-width: 200px;
+    }
 }
