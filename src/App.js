@@ -12,6 +12,8 @@ function BeerList() {
   const beersPerPage = 8;
 
   const data = apiData.read();
+  data.sort((a, b) => a.name.localeCompare(b.name));
+  
   const offset = pageNumber * beersPerPage;
   const currentPageData = data.slice(offset, offset + beersPerPage);
 
