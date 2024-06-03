@@ -1,0 +1,12 @@
+/* Header */
+
+header {
+  align-items: center;
+  background-color: rgb(225, 161, 11);
+}
+
+.beer-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+}
