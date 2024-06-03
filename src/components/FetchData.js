@@ -1,4 +1,6 @@
-const getSuspender = (promise) => {
+import React from "react";
+
+function getSuspender(promise) {
   let status = "pending";
   let response;
 
@@ -12,7 +14,6 @@ const getSuspender = (promise) => {
       response = err;
     }
   );
-  
   const read = () => {
     switch (status) {
       case "pending":
