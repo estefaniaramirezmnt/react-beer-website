@@ -8,17 +8,17 @@
     list-style: none;
 }
 
-.pagination {
+ul.pagination {
     display: flex;
     justify-content: center;
-    list-style: none;
-    padding: 0;
+    flex-wrap: wrap;
+    padding: 30px;
 }
 
 .pagination li {
     color: rgb(21, 82, 99);
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 .pagination li a {
@@ -64,5 +64,15 @@ header {
 
     .beer-logo {
         max-width: 200px;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+
+
+    .pagination li {
+        margin: 5px;
     }
 }
