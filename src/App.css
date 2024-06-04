@@ -1,7 +1,7 @@
 /* App.js */
 .beer-container {
     display: block;
-    margin: 60px auto;
+    margin: 40px auto;
     max-width: 85%;
 }
 
@@ -27,12 +27,10 @@
 }
 
 .beer-image {
-    align-items: center;
     display: block;
     margin: 10px auto;
-    max-width: 100%;
+    max-width: 80%;
     text-align: center;
-    max-width: 200px;
 }
 
 ul.pagination {
@@ -83,6 +81,24 @@ header {
 }
 
 /*Media querie */
+@media (max-width: 1300px) {
+    .beer-container {
+        max-width: 93%;
+    }
+    
+    .individual-beer {
+        margin: 20px 0px;
+        min-height: 275px;
+    }
+}
+
+@media (max-width: 990px) {
+    .individual-beer {
+        max-width: 80%;
+        margin: 20px auto;
+    }
+}
+
 
 @media (max-width: 768px) {
     header {
@@ -97,9 +113,9 @@ header {
         text-align: center;
     }
 
-    /* .pagination {
-        flex-wrap: wrap;
-    } */
+    .pagination {
+        margin: 30px;
+    }
 
     .pagination li {
         margin: 5px;

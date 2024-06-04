@@ -38,7 +38,7 @@ function BeerList() {
       <div className="beer-container">
         <Row className="row-of-beers">
           {currentPageData?.map((beer) => (
-            <Col key={beer.id} md={3}>
+            <Col key={beer.id} lg={3} sm={6}>
               <div className="individual-beer">
                 <h3>{beer.name}</h3>
                 <img src={beer.image} alt={beer.name} className="beer-image" />
