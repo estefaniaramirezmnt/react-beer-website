@@ -9,15 +9,19 @@
 } */
 
 .individual-beer {
-    border: 1px solid green;
-    margin: 10px 15px;
+    background-color: rgba(21, 82, 99, 0.8);
+    border-radius: 20px;
+    box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    margin: 20px 15px;
     min-height: 250px;
     padding: 10px;
 }
 
 .individual-beer h3 {
-    color: rgb(21, 82, 99);
+    color: #fff;
     font-size: 20px;
+    font-weight: bold;
     margin: 15px 0px;
     text-align: center;
 }
@@ -35,7 +39,7 @@ ul.pagination {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0px 40px 40px;
+    padding: 0px 0px 40px;
 }
 
 .pagination li {
