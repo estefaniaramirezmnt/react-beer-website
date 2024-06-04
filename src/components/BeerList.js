@@ -3,10 +3,8 @@ import ReactPaginate from "react-paginate";
 import { ApiContext } from "./ApiContext";
 // import boostrap
 import "bootstrap/dist/css/bootstrap.min.css";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function BeerList() {
   const apiData = useContext(ApiContext);
@@ -37,16 +35,18 @@ function BeerList() {
       </ul> */}
       {/* Display the data with rows and columns with boostrap */}
 
-      <Container className="beer-container">
-        <Row>
+      <div className="beer-container">
+        <Row className="row-of-beers">
           {currentPageData?.map((beer) => (
-            <Col key={beer.id} md={3} className="individual-beer">
-              <h3>{beer.name}</h3>
-              <Image src={beer.image} alt={beer.name} fluid />
+            <Col key={beer.id} md={3}>
+              <div className="individual-beer">
+                <h3>{beer.name}</h3>
+                <img src={beer.image} alt={beer.name} className="beer-image" />
+              </div>
             </Col>
           ))}
         </Row>
-      </Container>
+      </div>
       <ReactPaginate
         previousLabel={"previous"}
         nextLabel={"next"}
