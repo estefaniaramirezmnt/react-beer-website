@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import { createContext } from "react";
 import fetchData from "./FetchData";
 
 const apiData = fetchData("https://api.sampleapis.com/beers/ale");
