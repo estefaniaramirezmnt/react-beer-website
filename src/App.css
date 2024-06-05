@@ -1,12 +1,26 @@
+:root {
+    --primary-color: rgb(21, 82, 99);
+    --secondary-color: rgb(225, 161, 11);
+    --tertiary-color: rgb(255, 111, 60);
+    --quaternary-color: rgb(0, 0, 0);
+    --quinary-color: rgb(255, 255, 255);
+}
+
 /* App.js */
+
+.app-container {
+    background-color: var(--quinary-color);
+    color: var(--quinary-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .beer-container {
     display: block;
     margin: 40px auto;
     max-width: 85%;
 }
-
-/* .row-of-beers {
-} */
 
 .individual-beer {
     background-color: rgba(21, 82, 99, 0.8);

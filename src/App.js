@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className="app-container">
       <Header />
       <Suspense fallback={<div>Loading...</div>}>
         <ApiProvider>
