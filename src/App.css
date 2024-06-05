@@ -9,7 +9,7 @@
 /* App.js */
 
 .app-container {
-    background-color: var(--primary-color);
+    background-color: var(--quinary-color);
     color: var(--quinary-color);
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -18,22 +18,23 @@
 
 .beer-container {
     display: block;
-    margin: 40px auto;
-    max-width: 85%;
+    margin: 30px auto;
+    max-width: 80%;
 }
 
 .individual-beer {
     background-color: var(--quinary-color);
+    border: 3px solid var(--secondary-color);
     border-radius: 20px;
-    box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.4);
-    color: var(--quaternary-color);
+    box-shadow: 8px 8px 20px 8px rgba(21, 82, 99, 0.3);
+    color: var(--primary-color);
     margin: 20px 15px;
-    min-height: 250px;
+    min-height: 300px;
     padding: 10px;
 }
 
 .individual-beer h3 {
-    color: var(--quaternary-color);
+    color: var(--primary-color);
     font-size: 20px;
     font-weight: bold;
     margin: 15px 0px;
@@ -45,6 +46,15 @@
     margin: 10px auto;
     max-width: 80%;
     text-align: center;
+}
+
+.beer-price {
+    color: var(--tertiary-color);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0px 10px;
+    text-align: center;
+
 }
 
 ul.pagination {
@@ -63,7 +73,7 @@ ul.pagination {
 .pagination li a {
     display: block;
     padding: 8px 12px;
-    background-color: rgb(225, 161, 11);
+    background-color: var(--primary-color);
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -72,7 +82,7 @@ ul.pagination {
 
 .pagination li a:hover,
 .pagination .active a:hover {
-    background-color: var(--quaternary-color);
+    background-color: var(--secondary-color);
 }
 
 .pagination .active a {

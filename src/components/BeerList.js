@@ -42,6 +42,7 @@ function BeerList() {
               <div className="individual-beer">
                 <h3>{beer.name}</h3>
                 <img src={beer.image} alt={beer.name} className="beer-image" />
+                <p className="beer-price">{beer.price}</p>
               </div>
             </Col>
           ))}

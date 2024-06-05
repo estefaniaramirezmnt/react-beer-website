@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <NavLink className="navbar-brand mr-4" to="/">
             Don't worry, beer happy!
@@ -23,30 +23,17 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink
-                  className={`nav-link ${({ isActive }) =>
-                    isActive ? "active" : ""}`}
-                  exact
-                  to="/"
-                >
+                <NavLink className="nav-link" exact to="/">
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  className={`nav-link ${({ isActive }) =>
-                    isActive ? "active" : ""}`}
-                  to="/beerlist"
-                >
+                <NavLink className="nav-link" to="/beerlist">
                   Beer List
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink
-                  className={`nav-link ${({ isActive }) =>
-                    isActive ? "active" : ""}`}
-                  to="/findyourbeer"
-                >
+                <NavLink className="nav-link" to="/findyourbeer">
                   Find your beer
                 </NavLink>
               </li>
@@ -59,4 +46,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
