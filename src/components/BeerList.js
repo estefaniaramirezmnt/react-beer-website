@@ -1,7 +1,6 @@
 import { useState, useContext } from "react";
 import ReactPaginate from "react-paginate";
 import { ApiContext } from "./ApiContext";
-// import boostrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -25,16 +24,13 @@ function BeerList() {
 
   return (
     <div>
-      {/* <ul className="beers">
-        {currentPageData?.map((beer) => (
-          <li key={beer.id}>
-            <h3>{beer.name}</h3>
-            <img src={beer.image} alt={beer.name} />
-          </li>
-        ))}
-      </ul> */}
-      {/* Display the data with rows and columns with boostrap */}
-
+      <div className="sort-container">
+        <label htmlFor="sort">Sort by:</label>
+        <select id="sort">
+          <option value="name-asc">Name (A-Z)</option>
+          <option value="name-desc">Name (Z-A)</option>
+        </select>
+      </div>
       <div className="beer-container">
         <Row className="row-of-beers">
           {currentPageData?.map((beer) => (
@@ -42,7 +38,9 @@ function BeerList() {
               <div className="individual-beer">
                 <h3>{beer.name}</h3>
                 <img src={beer.image} alt={beer.name} className="beer-image" />
-                <p className="beer-price">{beer.price}</p>
+                <p className="beer-price">${beer.price.slice(1)}</p>
+                {/* The price is a string */}
+                {/* <p className="beer-price">{beer.price}</p> */}
               </div>
             </Col>
           ))}
