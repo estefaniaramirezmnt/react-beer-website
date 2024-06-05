@@ -1,13 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "../style/navbar.css";
+
 function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
+          <NavLink className="navbar-brand mr-4" to="/">
+            Don't worry, beer happy!
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -22,19 +24,19 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <NavLink className={`nav-link ${({ isActive }) => (isActive ? "active" : "")}`} exact to="/">
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/beerlist">
+                <NavLink className={`nav-link ${({ isActive }) => (isActive ? "active" : "")}`} to="/beerlist">
                   Beer List
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/findyourbeer">
+                <NavLink className={`nav-link ${({ isActive }) => (isActive ? "active" : "")}`} to="/findyourbeer">
                   Find your beer
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>

@@ -1,0 +1,35 @@
+:root {
+    --primary-color: rgb(21, 82, 99);
+    --secondary-color: rgb(225, 161, 11);
+    --tertiary-color: rgb(255, 111, 60);
+    --quaternary-color: rgb(0, 0, 0);
+    --quinary-color: rgb(255, 255, 255);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+}
+
+.navbar-brand {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+  
+.nav-link {
+    color: rgb(255, 255, 255);
+    margin: 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: rgb(255, 111, 60);
+}
+
+.nav-link.active {
+    color: rgb(225, 161, 11);
+    font-weight: bold;
+}
