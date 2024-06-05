@@ -7,7 +7,6 @@
 }
 
 /* App.js */
-
 .app-container {
     background-color: var(--quinary-color);
     color: var(--quinary-color);
@@ -19,7 +18,7 @@
 .beer-container {
     display: block;
     margin: 20px auto;
-    max-width: 80%;
+    max-width: 85%;
 }
 
 .individual-beer {
@@ -28,7 +27,7 @@
     border-radius: 20px;
     box-shadow: 8px 8px 20px 8px rgba(21, 82, 99, 0.3);
     color: var(--primary-color);
-    margin: 20px 15px;
+    margin: 15px 10px 20px;
     min-height: 300px;
     padding: 10px;
 }
