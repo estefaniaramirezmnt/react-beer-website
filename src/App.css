@@ -18,7 +18,7 @@
 
 .beer-container {
     display: block;
-    margin: 30px auto;
+    margin: 20px auto;
     max-width: 80%;
 }
 
@@ -67,7 +67,7 @@ ul.pagination {
 .pagination li {
     color: #fff;
     display: inline-block;
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 
 .pagination li a {
@@ -116,6 +116,29 @@ header {
 
 .nav-link {
     margin: 0px 10px;
+}
+
+.sort-container {
+    align-items: center;
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.sort-button {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--quinary-color);
+    cursor: pointer;
+    font-size: 16px;
+    margin: 40px 10px 0px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sort-button:hover {
+    background-color: var(--primary-color);
 }
 
 /*Media querie */
