@@ -24,7 +24,6 @@ function SelectOrder({ onSort }) {
 
   return (
     <div className="sort-container">
-      <label htmlFor="sort">Sort by:</label>
       <select id="sort" onChange={handleSort} className="sort-button">
         <option value="">Select order</option>
         <option value="name-asc">Name (A-Z)</option>

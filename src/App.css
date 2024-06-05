@@ -18,7 +18,7 @@
 .beer-container {
     display: block;
     margin: 20px auto;
-    max-width: 85%;
+    max-width: 90%;
 }
 
 .individual-beer {
@@ -119,9 +119,9 @@ header {
 
 .sort-container {
     align-items: center;
-    display: block;
     margin: 0px auto;
     text-align: center;
+    justify-content: center;
 }
 
 .sort-button {
@@ -132,7 +132,7 @@ header {
     cursor: pointer;
     font-size: 16px;
     margin: 40px 10px 0px;
-    padding: 10px 20px;
+    padding: 10px 0px 10px 15px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -143,12 +143,12 @@ header {
 /*Media querie */
 @media (max-width: 1300px) {
     .beer-container {
-        max-width: 93%;
+        max-width: 95%;
     }
 
     .individual-beer {
         margin: 20px 0px;
-        min-height: 275px;
+        min-height: 330px;
     }
 }
 
@@ -159,7 +159,6 @@ header {
     }
 }
 
-
 @media (max-width: 768px) {
     header {
         padding: 20px;
@@ -169,8 +168,22 @@ header {
         max-width: 200px;
     }
 
+    a.navbar-brand,
+    .beer-price {
+        font-size: 0.8rem;
+    }
+
     .row-of-beers {
         text-align: center;
+    }
+
+    .individual-beer {
+        max-width: 65%;
+        padding: 5px;
+    }
+
+    .individual-beer h3 {
+        font-size: 0.9rem;
     }
 
     .pagination {
