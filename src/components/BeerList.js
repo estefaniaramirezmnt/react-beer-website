@@ -1,36 +1,31 @@
-import { useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import ReactPaginate from "react-paginate";
 import { ApiContext } from "./ApiContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import SelectOrder from "./SelectOrder";
 
 function BeerList() {
   const apiData = useContext(ApiContext);
+  const [data, setData] = useState(apiData.read());
   const [pageNumber, setPageNumber] = useState(0);
+
   const beersPerPage = 8;
-
-  const data = apiData.read();
-  data.sort((a, b) => a.name.localeCompare(b.name));
-
   const offset = pageNumber * beersPerPage;
   const currentPageData = data.slice(offset, offset + beersPerPage);
-
   const pageCount = Math.ceil(data.length / beersPerPage);
-
   const handlePageChange = ({ selected }) => {
     setPageNumber(selected);
   };
 
+  const handleSort = (sortedData) => {
+    setData([...sortedData]);
+  };
+
   return (
     <div>
-      <div className="sort-container">
-        <label htmlFor="sort">Sort by:</label>
-        <select id="sort">
-          <option value="name-asc">Name (A-Z)</option>
-          <option value="name-desc">Name (Z-A)</option>
-        </select>
-      </div>
+      <SelectOrder onSort={handleSort} />
       <div className="beer-container">
         <Row className="row-of-beers">
           {currentPageData?.map((beer) => (
