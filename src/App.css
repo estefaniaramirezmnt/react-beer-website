@@ -2,14 +2,14 @@
     --primary-color: rgb(21, 82, 99);
     --secondary-color: rgb(225, 161, 11);
     --tertiary-color: rgb(255, 111, 60);
-    --quaternary-color: rgb(0, 0, 0);
+    --quaternary-color: rgb(52, 58, 64);
     --quinary-color: rgb(255, 255, 255);
 }
 
 /* App.js */
 
 .app-container {
-    background-color: var(--quinary-color);
+    background-color: var(--primary-color);
     color: var(--quinary-color);
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -23,17 +23,17 @@
 }
 
 .individual-beer {
-    background-color: rgba(21, 82, 99, 0.8);
+    background-color: var(--quinary-color);
     border-radius: 20px;
     box-shadow: 8px 8px 20px 8px rgba(0, 0, 0, 0.4);
-    color: #fff;
+    color: var(--quaternary-color);
     margin: 20px 15px;
     min-height: 250px;
     padding: 10px;
 }
 
 .individual-beer h3 {
-    color: #fff;
+    color: var(--quaternary-color);
     font-size: 20px;
     font-weight: bold;
     margin: 15px 0px;
@@ -63,20 +63,20 @@ ul.pagination {
 .pagination li a {
     display: block;
     padding: 8px 12px;
-    background-color: rgb(21, 82, 99);
+    background-color: rgb(225, 161, 11);
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .pagination li a:hover,
 .pagination .active a:hover {
-    background-color: rgb(255, 111, 60);
+    background-color: var(--quaternary-color);
 }
 
 .pagination .active a {
-    background-color: rgb(225, 161, 11);
+    background-color: rgb(255, 111, 60);
     color: #fff;
 }
 
