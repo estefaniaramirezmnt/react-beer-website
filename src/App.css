@@ -11,7 +11,7 @@
 .app-container {
     background-color: var(--quinary-color);
     color: var(--quinary-color);
-    font-family: 'Roboto', sans-serif;
+    font-family: "Source Code Pro", monospace;
     margin: 0;
     padding: 0;
 }
@@ -116,14 +116,14 @@ header {
 
 .nav-link {
     margin: 0px 10px;
-} 
+}
 
 /*Media querie */
 @media (max-width: 1300px) {
     .beer-container {
         max-width: 93%;
     }
-    
+
     .individual-beer {
         margin: 20px 0px;
         min-height: 275px;
