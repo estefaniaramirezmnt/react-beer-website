@@ -94,6 +94,20 @@ header {
     max-width: 350px;
 }
 
+/* Navbar */
+.navbar {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+.nav-link {
+    margin: 0px 10px;
+} 
+
 /*Media querie */
 @media (max-width: 1300px) {
     .beer-container {
