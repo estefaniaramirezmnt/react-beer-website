@@ -34,8 +34,6 @@ function BeerList() {
                 <h3>{beer.name}</h3>
                 <img src={beer.image} alt={beer.name} className="beer-image" />
                 <p className="beer-price">${beer.price.slice(1)}</p>
-                {/* The price is a string */}
-                {/* <p className="beer-price">{beer.price}</p> */}
               </div>
             </Col>
           ))}

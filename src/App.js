@@ -4,8 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import { ApiProvider } from "./components/ApiContext";
 import BeerList from "./components/BeerList";
+import Footer from "./components/Footer";
+import { ApiProvider } from "./components/ApiContext";
 import "./App.css";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
