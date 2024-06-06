@@ -101,7 +101,22 @@ header {
         opacity: 1; 
     }
 }
+ /*display the imgs in a grid*/
 
+.home-img-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.home-img-container img {
+    display: block;
+    margin: 0 auto;
+    max-width: 550px
+}
 /* BeerList */
 .beer-container {
     display: block;
