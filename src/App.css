@@ -260,6 +260,10 @@ ul.pagination {
         font-size: 0.8rem;
     }
 
+    .image-gallery {
+        max-width: 90%;
+    }
+
     .row-of-beers {
         text-align: center;
     }
