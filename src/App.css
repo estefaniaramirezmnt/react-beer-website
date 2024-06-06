@@ -236,3 +236,18 @@ header {
         margin: 5px;
     }
 }
+
+
+/* App.css */
+
+/* Añade estas reglas a tu contenedor principal */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Asegura que el contenido principal tome el espacio necesario */
+.content-wrapper {
+    flex: 1;
+}

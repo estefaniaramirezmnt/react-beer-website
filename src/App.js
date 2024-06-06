@@ -12,23 +12,25 @@ import "./App.css";
 function App() {
   return (
     <div className="app-container">
-      <Header />
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/beerlist"
-            element={
-              <Suspense fallback={<div>Loading...</div>}>
-                <ApiProvider>
-                  <BeerList />
-                </ApiProvider>
-              </Suspense>
-            }
-          />
-        </Routes>
-      </BrowserRouter>
+      <div className="content-wrapper">
+        <Header />
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/beerlist"
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <ApiProvider>
+                    <BeerList />
+                  </ApiProvider>
+                </Suspense>
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </div>
       <Footer />
     </div>
   );
