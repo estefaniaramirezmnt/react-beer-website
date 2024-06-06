@@ -38,5 +38,22 @@ const mockApiData = [
     image: "wheat.jpg",
     alt: "Wheat Beer",
     price: "$3.00",
-  }
+  },
 ];
+
+describe("BeerList component", () => {
+  beforeEach(() => {
+    render(
+      <ApiContext.Provider value={{ read: () => mockApiData }}>
+        <BeerList />
+      </ApiContext.Provider>
+    );
+  });
+
+  test("renders beer names", () => {
+    const beerNames = mockApiData.map((beer) => beer.name);
+    beerNames.forEach((name) => {
+      expect(screen.getByText(name)).toBeInTheDocument();
+    });
+  });
+});
