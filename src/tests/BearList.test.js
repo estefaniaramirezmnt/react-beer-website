@@ -56,4 +56,20 @@ describe("BeerList component", () => {
       expect(screen.getByText(name)).toBeInTheDocument();
     });
   });
+
+  test("renders beer images", () => {
+    const beerImages = mockApiData.map((beer) => ({
+      alt: beer.alt,
+    }));
+    beerImages.forEach((image) => {
+      expect(screen.getByAltText(image.alt)).toBeInTheDocument();
+    });
+  });
+
+  test("renders beer prices", () => {
+    const beerPrices = mockApiData.map((beer) => beer.price.slice(1));
+    beerPrices.forEach((price) => {
+      expect(screen.getByText(`$${price}`)).toBeInTheDocument();
+    });
+  });
 });
