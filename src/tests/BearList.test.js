@@ -72,4 +72,28 @@ describe("BeerList component", () => {
       expect(screen.getByText(`$${price}`)).toBeInTheDocument();
     });
   });
+
+  test("sorts the beers by name ascending", () => {
+    fireEvent.change(screen.getByRole("combobox"), {
+      target: { value: "name-asc" },
+    });
+    const sortedNames = mockApiData
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map((beer) => beer.name);
+    sortedNames.forEach((name) => {
+      expect(screen.getByText(name)).toBeInTheDocument();
+    });
+  });
+
+  test("sorts the beers by name descending", () => {
+    fireEvent.change(screen.getByRole("combobox"), {
+      target: { value: "name-desc" },
+    });
+    const sortedNames = mockApiData
+      .sort((a, b) => b.name.localeCompare(a.name))
+      .map((beer) => beer.name);
+    sortedNames.forEach((name) => {
+      expect(screen.getByText(name)).toBeInTheDocument();
+    });
+  });
 });
