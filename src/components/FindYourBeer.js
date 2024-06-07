@@ -13,15 +13,19 @@ function FindYourBeer() {
     inputRef.current.focus();
   }, []);
 
+  const filteredBeers = beers.filter((beer) => {
+    return (
+      inputValue &&
+      beer &&
+      beer.name &&
+      beer.name.toLowerCase().includes(inputValue)
+    );
+  });
+  console.log(filteredBeers);
+  
   const handleInputChange = (e) => {
     setInputValue(e.target.value.toLowerCase());
   };
-
-  const filteredBeers = beers
-    .filter((beer) =>
-      beer.name.toLowerCase().includes(inputValue)
-    )
-    .slice(0, 10); // Limitar a 6 resultados
 
   return (
     <div className="search-container">
@@ -36,15 +40,6 @@ function FindYourBeer() {
           onChange={handleInputChange}
         />
       </div>
-      {inputValue && (
-        <div className="results-container">
-          <ul>
-            {filteredBeers.map((beer) => (
-              <li key={beer.id}>{beer.name}</li>
-            ))}
-          </ul>
-        </div>
-      )}
       <h3>Find Your Beer 🍺</h3>
     </div>
   );
