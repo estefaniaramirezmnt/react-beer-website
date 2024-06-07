@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-function SearchBar() {
+function FindYourBeer() {
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+  
+
   return (
     <div className="search-container">
       <div className="input-container">
@@ -11,6 +18,7 @@ function SearchBar() {
           type="text"
           placeholder="Search for a beer..."
           className="search-bar"
+          ref={inputRef}
         />
       </div>
       <h3>Find Your Beer</h3>
@@ -18,4 +26,4 @@ function SearchBar() {
   );
 }
 
-export default SearchBar;
+export default FindYourBeer;
