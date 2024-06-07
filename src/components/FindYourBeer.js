@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { ApiContext } from "./ApiContext";
+import BeerCard from "./BeerCard";
 
 function FindYourBeer() {
   const inputRef = useRef(null);
@@ -38,14 +39,6 @@ function FindYourBeer() {
   const handleBeerClick = (beer) => {
     setSelectedBeer(beer);
   };
-  const renderRatingStars = (rating) => {
-    const starCount = Math.floor(rating);
-    const stars = [];
-    for (let i = 0; i < starCount; i++) {
-      stars.push(<span key={i}>⭐</span>);
-    }
-    return stars;
-  };
 
   return (
     <div className="search-container">
@@ -68,17 +61,7 @@ function FindYourBeer() {
           </div>
         ))}
       </div>
-      {selectedBeer && (
-        <div className="selected-beer">
-          <img src={selectedBeer.image} alt={selectedBeer.name} />
-          <h3>{selectedBeer.name}</h3>
-          <p>Price: {selectedBeer.price}</p>
-          <div>
-            <span>Rating: {selectedBeer.rating.average.toFixed(2)} </span>
-            {renderRatingStars(selectedBeer.rating.average)}
-          </div>
-        </div>
-      )}
+      {selectedBeer && <BeerCard beer={selectedBeer} />}
     </div>
   );
 }
