@@ -186,19 +186,19 @@ ul.pagination {
 /* Find your beer */
 .search-container {
     color: var(--primary-color);
-    margin: 60px;
+    margin: 60px 0px;
     text-align: center;
 }
 
 .input-container {
     align-items: center;
-    border: 2px solid #ccc;
+    border: 2px solid var(--secondary-color);
     border-radius: 5px;
     display: flex;
     margin: 0 auto;
     margin-bottom: 20px;
     max-width: 350px;
-    overflow: scroll;
+    overflow: hidden;
     padding: 5px;
     width: 100%;
 }
@@ -212,7 +212,11 @@ ul.pagination {
     background-color: transparent;
     border: none;
     outline: none;
-    /* flex: 1; */
+    flex: 1;
+}
+
+.search-container h3 {
+    font-size: 1.7rem;
 }
 
 .search-results {
@@ -230,7 +234,8 @@ ul.pagination {
 }
 
 .results-list div {
-  cursor: pointer;
+    cursor: pointer;
+    margin: 0;
 }
 
 .show-shadow {
@@ -259,7 +264,7 @@ ul.pagination {
 
 .selected-beer h3 {
     color: var(--primary-color);
-    font-size: 30px;
+    font-size: 1.1rem;
     font-weight: bold;
     margin: 10px;
     text-align: center;
@@ -376,8 +381,24 @@ ul.pagination {
         margin: 5px;
     }
 
+    /* Find your beer */
+
+    .results-list {
+        width: 80%;
+    }
+
+    .search-container h3 {
+        font-size: 1.2rem;
+    }
+
     /* Footer */
     .footer .brands li {
         margin: 0px 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .selected-beer {
+        max-width: 80%;
     }
 }
