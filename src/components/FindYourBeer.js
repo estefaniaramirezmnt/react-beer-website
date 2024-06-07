@@ -8,7 +8,7 @@ function FindYourBeer() {
 
   const [inputValue, setInputValue] = useState("");
   const [filteredBeers, setFilteredBeers] = useState([]);
-  const [selectedBeer, setSelectedBeer] = useState(null); 
+  const [selectedBeer, setSelectedBeer] = useState(null);
   const [showShadow, setShowShadow] = useState(false);
 
   const apiData = useContext(ApiContext);
@@ -28,7 +28,7 @@ function FindYourBeer() {
       );
     });
     setFilteredBeers(filtered);
-    setShowShadow(filtered.length > 0); 
+    setShowShadow(filtered.length > 0);
   }, [inputValue, beers]);
 
   const handleInputChange = (e) => {
@@ -37,7 +37,15 @@ function FindYourBeer() {
 
   const handleBeerClick = (beer) => {
     setSelectedBeer(beer);
-  }
+  };
+  const renderRatingStars = (rating) => {
+    const starCount = Math.floor(rating);
+    const stars = [];
+    for (let i = 0; i < starCount; i++) {
+      stars.push(<span key={i}>⭐</span>);
+    }
+    return stars;
+  };
 
   return (
     <div className="search-container">
@@ -65,7 +73,10 @@ function FindYourBeer() {
           <img src={selectedBeer.image} alt={selectedBeer.name} />
           <h3>{selectedBeer.name}</h3>
           <p>Price: {selectedBeer.price}</p>
-          <p>Rating: {selectedBeer.rating.average.toFixed(2)}</p>
+          <div>
+            <span>Rating: {selectedBeer.rating.average.toFixed(2)} </span>
+            {renderRatingStars(selectedBeer.rating.average)}
+          </div>
         </div>
       )}
     </div>
