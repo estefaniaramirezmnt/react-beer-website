@@ -8,7 +8,8 @@ function FindYourBeer() {
 
   const [inputValue, setInputValue] = useState("");
   const [filteredBeers, setFilteredBeers] = useState([]);
-  
+  const [showShadow, setShowShadow] = useState(false);
+
   const apiData = useContext(ApiContext);
   const beers = apiData.read();
 
@@ -26,6 +27,7 @@ function FindYourBeer() {
       );
     });
     setFilteredBeers(filtered);
+    setShowShadow(filtered.length > 0); 
   }, [inputValue, beers]);
 
   const handleInputChange = (e) => {
@@ -46,7 +48,7 @@ function FindYourBeer() {
         />
       </div>
       <h3>Find Your Beer 🍺</h3>
-      <div className="results-list">
+      <div className={`results-list ${showShadow ? "show-shadow" : ""}`}>
         {filteredBeers.map((beer) => (
           <div key={beer.id}>
             <p>{beer.name}</p>
