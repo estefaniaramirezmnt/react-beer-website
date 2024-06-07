@@ -183,6 +183,11 @@ ul.pagination {
     color: #fff;
 }
 
+/* Find your beer */
+
+.search-container {
+    color: var(--primary-color);
+}
 
 /* Footer */
 

@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import BeerList from "./components/BeerList";
+import FindYourBeer from "./components/FindYourBeer";
 import Footer from "./components/Footer";
 import { ApiProvider } from "./components/ApiContext";
 import "./App.css";
@@ -28,6 +29,7 @@ function App() {
                 </Suspense>
               }
             />
+            <Route path="/findyourbeer" element={<FindYourBeer />} />
           </Routes>
         </BrowserRouter>
       </div>
