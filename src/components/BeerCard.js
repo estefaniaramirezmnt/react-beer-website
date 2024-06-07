@@ -14,11 +14,11 @@ function BeerCard({ beer }) {
     <div className="selected-beer">
       <img src={beer.image} alt={beer.name} />
       <h3>{beer.name}</h3>
-      <p>Price: {beer.price}</p>
-      <div>
-        <span>Rating: {beer.rating.average.toFixed(2)} </span>
+      <p className="selected-beer-price"><span>Price:</span> {beer.price}</p>
+      <p className="selected-beer-rating">
+        <span>Rating:</span> {beer.rating.average.toFixed(2)} 
         {renderRatingStars(beer.rating.average)}
-      </div>
+      </p>
     </div>
   );
 }
