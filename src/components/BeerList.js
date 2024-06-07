@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import SelectOrder from "./SelectOrder";
+import noImageAvailable from "../img/noImageAvailable.jpg";
 
 function BeerList() {
   const apiData = useContext(ApiContext);
@@ -23,6 +24,10 @@ function BeerList() {
     setData([...sortedData]);
   };
 
+  const handleImageError = (e) => {
+    e.target.src = noImageAvailable;
+  };
+
   return (
     <div>
       <SelectOrder onSort={handleSort} />
@@ -32,7 +37,12 @@ function BeerList() {
             <Col key={beer.id} lg={3} sm={6}>
               <div className="individual-beer">
                 <h3>{beer.name}</h3>
-                <img src={beer.image} alt={beer.name} className="beer-image" />
+                <img 
+                  src={beer.image} 
+                  alt={beer.name} 
+                  className="beer-image" 
+                  onError={handleImageError}
+                />
                 <p className="beer-price">${beer.price.slice(1)}</p>
               </div>
             </Col>

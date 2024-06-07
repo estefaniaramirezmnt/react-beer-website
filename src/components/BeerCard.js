@@ -14,14 +14,14 @@ function BeerCard({ beer }) {
 
   const handleImageError = (e) => {
     e.target.src = noImageAvailable;
-  }
+  };
 
   return (
     <div className="selected-beer">
       <img
         src={beer.image}
         alt={beer.name}
-        onError={handleImageError} // Manejo del error de carga de la imagen
+        onError={handleImageError}
       />{" "}
       <h3>{beer.name}</h3>
       <p className="selected-beer-price">
