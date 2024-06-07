@@ -1,14 +1,16 @@
-import React, { Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import BeerList from "./components/BeerList";
-import FindYourBeer from "./components/FindYourBeer";
+// import BeerList from "./components/BeerList";
 import Footer from "./components/Footer";
 import { ApiProvider } from "./components/ApiContext";
 import "./App.css";
+
+const BeerList = lazy(() => import("./components/BeerList"));
+const FindYourBeer = lazy(() => import("./components/FindYourBeer"));
 
 function App() {
   return (
@@ -29,7 +31,16 @@ function App() {
                 </Suspense>
               }
             />
-            <Route path="/findyourbeer" element={<FindYourBeer />} />
+            <Route
+              path="/findyourbeer"
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <ApiProvider>
+                    <FindYourBeer />
+                  </ApiProvider>
+                </Suspense>
+              }
+            />
           </Routes>
         </BrowserRouter>
       </div>
