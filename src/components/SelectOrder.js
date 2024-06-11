@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { ApiContext } from "./ApiContext";
+import React from "react";
 
 export function priceToNumber(price) {
   return parseFloat(price.slice(1));
@@ -7,21 +6,20 @@ export function priceToNumber(price) {
 
 export function handleSort(e, onSort, data) {
   const value = e.target.value;
+  let sortedData = [...data];
   if (value === "name-asc") {
-    onSort(data.sort((a, b) => a.name.localeCompare(b.name)));
+    sortedData.sort((a, b) => a.name.localeCompare(b.name));
   } else if (value === "name-desc") {
-    onSort(data.sort((a, b) => b.name.localeCompare(a.name)));
+    sortedData.sort((a, b) => b.name.localeCompare(a.name));
   } else if (value === "price-asc") {
-    onSort(data.sort((a, b) => priceToNumber(a.price) - priceToNumber(b.price)));
+    sortedData.sort((a, b) => priceToNumber(a.price) - priceToNumber(b.price));
   } else if (value === "price-desc") {
-    onSort(data.sort((a, b) => priceToNumber(b.price) - priceToNumber(a.price)));
+    sortedData.sort((a, b) => priceToNumber(b.price) - priceToNumber(a.price));
   }
+  onSort(sortedData);
 }
 
-function SelectOrder({ onSort }) {
-  const apiData = useContext(ApiContext);
-  const data = apiData.read();
-
+function SelectOrder({ onSort, data }) {
   const handleSortChange = (e) => {
     handleSort(e, onSort, data);
   };

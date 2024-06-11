@@ -21,7 +21,7 @@ function BeerList() {
   };
 
   const handleSort = (sortedData) => {
-    setData([...sortedData]);A
+    setData([...sortedData]);
   };
 
   const handleImageError = (e) => {
@@ -30,7 +30,7 @@ function BeerList() {
 
   return (
     <div>
-      <SelectOrder onSort={handleSort} />
+      <SelectOrder onSort={handleSort} data={data} />
       <div className="beer-container">
         <Row className="row-of-beers">
           {currentPageData?.map((beer) => (
