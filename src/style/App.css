@@ -29,7 +29,7 @@
 
 header {
     align-items: center;
-    background-color: rgb(225, 161, 11);
+    background-color: var(--secondary-color);
     padding: 35px;
 }
 
@@ -177,7 +177,7 @@ ul.pagination {
 }
 
 .pagination .active a {
-    background-color: rgb(255, 111, 60);
+    background-color: var(--tertiary-color);
     color: #fff;
 }
 
