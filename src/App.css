@@ -121,8 +121,8 @@ header {
     border-radius: 20px;
     box-shadow: 8px 8px 20px 8px rgba(21, 82, 99, 0.3);
     color: var(--primary-color);
-    margin: 15px 10px 20px;
-    min-height: 330px;
+    margin: 35px 10px 20px;
+    min-height: 340px;
     padding: 10px;
 }
 
@@ -137,7 +137,6 @@ header {
 .beer-image {
     display: block;
     margin: 10px auto;
-    max-width: 80%;
     text-align: center;
 }
 
@@ -147,7 +146,6 @@ header {
     font-weight: bold;
     margin: 15px 0px 10px;
     text-align: center;
-
 }
 
 ul.pagination {
@@ -164,12 +162,12 @@ ul.pagination {
 }
 
 .pagination li a {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    color: #fff;
     display: block;
     padding: 8px 12px;
-    background-color: var(--primary-color);
-    color: #fff;
     text-decoration: none;
-    border-radius: 4px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -314,6 +312,18 @@ ul.pagination {
 }
 
 /*Media querie */
+@media (min-width: 2200px) {
+    .beer-container {
+        max-width: 70%;
+    }
+    
+    .individual-beer {
+        margin: 35px 10px 20px;
+        min-height: 350px;
+        padding: 10px;
+    }
+}
+
 @media (max-width: 1300px) {
     .beer-container {
         max-width: 95%;
@@ -365,7 +375,7 @@ ul.pagination {
     }
 
     .individual-beer {
-        max-width: 65%;
+        max-width: 85%;
         padding: 5px;
     }
 
@@ -398,6 +408,9 @@ ul.pagination {
 }
 
 @media (max-width: 550px) {
+    .individual-beer {
+        max-width: 75%;
+    }
     .selected-beer {
         max-width: 80%;
     }
