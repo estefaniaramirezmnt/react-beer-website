@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# To Beer or Not To Beer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[To Beer or Not To Beer](https://tobeerornottobeer.netlify.app/) is a web application that helps beer enthusiasts find and rate beers from around the world. This app is designed to help you explore and enjoy the vast world of beer.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [To Beer or Not To Beer](#to-beer-or-not-to-beer)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Technologies Used](#technologies-used)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Visuals](#visuals)
+  - [**Thank you for visiting!**](#thank-you-for-visiting)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Beer List**: Browse a list of beers from around the world where you can sort them by name or price.
+- **Search Beers**: Find beers by the name. Once you find a beer, you can click on it to view more details.
+- **User Ratings**: Rate and review beers you've tried.
+- **Responsive Design**: The app is designed to work on all devices, including mobile, tablet, and desktop.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **Frontend**: React, CSS, HTML
+- **API**: [Sample API](https://sampleapis.com/api-list/beers)
+- **Hosting**: Netlify
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+To run this project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:estefaniaramirezmnt/react-beer-website.git
+    ```
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+    npm start
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage 
+1. Open your browser and go to `http://localhost:3000/` to view the app.
+2. Browse the list of beers and see all the beers available.
+3. Search for a beer by the name and click to view detailed information and user ratings.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+We welcome contributions to this project! If you have suggestions or bug reports, please open an issue on our GitHub repository. If you'd like to contribute code, please fork the repository and submit a pull request.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is licensed under the terms of the Apache License 2.0.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Visuals
+![Home Page](./public/screenshot1.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Beer List](./public/screenshot2.png)
 
-## Learn More
+![Find your beer](./public/screenshot3.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## **Thank you for visiting!**
