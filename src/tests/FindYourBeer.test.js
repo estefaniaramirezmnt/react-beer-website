@@ -56,7 +56,6 @@ describe("FindYourBeer component", () => {
       </ApiContext.Provider>
     );
     
-    // Define el input una vez antes de cada test
     input = screen.getByPlaceholderText("Search for a beer...");
   });
 
