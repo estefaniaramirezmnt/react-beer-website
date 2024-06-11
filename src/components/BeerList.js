@@ -21,7 +21,7 @@ function BeerList() {
   };
 
   const handleSort = (sortedData) => {
-    setData([...sortedData]);
+    setData([...sortedData]);A
   };
 
   const handleImageError = (e) => {
