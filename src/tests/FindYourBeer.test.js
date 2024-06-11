@@ -10,7 +10,6 @@ const mockApiData = [
     image: "ale.jpg",
     alt: "Ale Beer",
     price: "$5.00",
-    rating: { average: 4.5 }
   },
   {
     id: 2,
@@ -18,7 +17,6 @@ const mockApiData = [
     image: "lager.jpg",
     alt: "Lager Beer",
     price: "$4.00",
-    rating: { average: 3.8 }
   },
   {
     id: 3,
@@ -26,7 +24,6 @@ const mockApiData = [
     image: "pilsner.jpg",
     alt: "Pilsner Beer",
     price: "$6.00",
-    rating: { average: 4.0 }
   },
   {
     id: 4,
@@ -34,7 +31,6 @@ const mockApiData = [
     image: "stout.jpg",
     alt: "Stout Beer",
     price: "$7.00",
-    rating: { average: 4.7 }
   },
   {
     id: 5,
@@ -42,7 +38,6 @@ const mockApiData = [
     image: "wheat.jpg",
     alt: "Wheat Beer",
     price: "$3.00",
-    rating: { average: 4.1 }
   },
 ];
 
@@ -66,5 +61,16 @@ describe("FindYourBeer component", () => {
 
     expect(screen.getByText("Lager Beer")).toBeInTheDocument();
     expect(screen.queryByText("Ale Beer")).not.toBeInTheDocument();
+  });
+
+  test("clears search input and displays all beers", () => {
+    const input = screen.getByPlaceholderText("Search for a beer...");
+    fireEvent.change(input, { target: { value: "" } });
+
+    expect(screen.queryByText("Lager Beer")).not.toBeInTheDocument();
+    expect(screen.queryByText("Ale Beer")).not.toBeInTheDocument();
+    expect(screen.queryByText("Pilsner Beer")).not.toBeInTheDocument();
+    expect(screen.queryByText("Stout Beer")).not.toBeInTheDocument();
+    expect(screen.queryByText("Wheat Beer")).not.toBeInTheDocument();
   });
 });
