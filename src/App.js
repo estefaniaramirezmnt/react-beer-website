@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home";
 import Header from "./components/Header";
@@ -17,7 +17,6 @@ function App() {
     <div className="app-container">
       <div className="content-wrapper">
         <Header />
-        <BrowserRouter>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -42,7 +41,6 @@ function App() {
               }
             />
           </Routes>
-        </BrowserRouter>
       </div>
       <Footer />
     </div>
