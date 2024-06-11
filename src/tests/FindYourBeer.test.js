@@ -54,4 +54,17 @@ describe("FindYourBeer component", () => {
       </ApiContext.Provider>
     );
   });
+
+  test("renders search input and placeholder", () => {
+    const input = screen.getByPlaceholderText("Search for a beer...");
+    expect(input).toBeInTheDocument();
+  });
+
+  test("filters and displays beers based on search input", () => {
+    const input = screen.getByPlaceholderText("Search for a beer...");
+    fireEvent.change(input, { target: { value: "lager" } });
+
+    expect(screen.getByText("Lager Beer")).toBeInTheDocument();
+    expect(screen.queryByText("Ale Beer")).not.toBeInTheDocument();
+  });
 });
