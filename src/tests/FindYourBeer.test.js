@@ -91,4 +91,3 @@ describe("FindYourBeer component", () => {
     expect(screen.getByTestId("beer-rating")).toHaveTextContent("4.00");
   });
 });
-w
