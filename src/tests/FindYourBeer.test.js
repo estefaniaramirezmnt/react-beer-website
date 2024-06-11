@@ -47,21 +47,24 @@ const mockApiData = [
 ];
 
 describe("FindYourBeer component", () => {
+  let input;
+
   beforeEach(() => {
     render(
       <ApiContext.Provider value={{ read: () => mockApiData }}>
         <FindYourBeer />
       </ApiContext.Provider>
     );
+    
+    // Define el input una vez antes de cada test
+    input = screen.getByPlaceholderText("Search for a beer...");
   });
 
   test("renders search input and placeholder", () => {
-    const input = screen.getByPlaceholderText("Search for a beer...");
     expect(input).toBeInTheDocument();
   });
 
   test("filters and displays beers based on search input", () => {
-    const input = screen.getByPlaceholderText("Search for a beer...");
     fireEvent.change(input, { target: { value: "lager" } });
 
     expect(screen.getByText("Lager Beer")).toBeInTheDocument();
@@ -69,7 +72,6 @@ describe("FindYourBeer component", () => {
   });
 
   test("clears search input and displays all beers", () => {
-    const input = screen.getByPlaceholderText("Search for a beer...");
     fireEvent.change(input, { target: { value: "" } });
 
     expect(screen.queryByText("Lager Beer")).not.toBeInTheDocument();
@@ -80,7 +82,6 @@ describe("FindYourBeer component", () => {
   });
 
   test("shows BeerCard when a beer is selected", () => {
-    const input = screen.getByPlaceholderText("Search for a beer...");
     fireEvent.change(input, { target: { value: "lager" } });
   
     const lagerBeer = screen.getByText("Lager Beer");
@@ -91,3 +92,4 @@ describe("FindYourBeer component", () => {
     expect(screen.getByTestId("beer-rating")).toHaveTextContent("4.00");
   });
 });
+w
