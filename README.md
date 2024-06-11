@@ -2,6 +2,9 @@
 
 [![Unit test CI](https://github.com/estefaniaramirezmnt/react-beer-website/actions/workflows/node.js.yml/badge.svg)](https://github.com/estefaniaramirezmnt/react-beer-website/actions/workflows/node.js.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/04ee72d7-4164-478a-9a0c-0593af0b72a7/deploy-status)](https://app.netlify.com/sites/tobeerornottobeer/deploys)
+![GitHub](https://img.shields.io/github/license/estefaniaramirezmnt/react-beer-website)
+![GitHub repo size](https://img.shields.io/github/repo-size/estefaniaramirezmnt/react-beer-website)
+![GitHub last commit](https://img.shields.io/github/last-commit/estefaniaramirezmnt/react-beer-website)
 
 [To Beer or Not To Beer](https://tobeerornottobeer.netlify.app/) is a web application that helps beer enthusiasts find and rate beers from around the world. This app is designed to help you explore and enjoy the vast world of beer.
 
