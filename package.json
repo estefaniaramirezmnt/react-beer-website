@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-private-property-in-object": "^7.24.7",
     "@testing-library/react": "^16.0.0",
     "jest": "^27.5.1"
   }
