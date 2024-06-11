@@ -5,7 +5,8 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ApiProvider } from "./components/ApiContext";
-import "./App.css";
+import "./style/App.css";
+import "./style/MediaQueries.css";
 
 const Home = lazy(() => import("./components/Home"));
 const BeerList = lazy(() => import("./components/BeerList"));
