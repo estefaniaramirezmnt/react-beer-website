@@ -10,6 +10,7 @@ const mockApiData = [
     image: "ale.jpg",
     alt: "Ale Beer",
     price: "$5.00",
+    rating: { average: 4.5 },
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ const mockApiData = [
     image: "lager.jpg",
     alt: "Lager Beer",
     price: "$4.00",
+    rating: { average: 4.0 },
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ const mockApiData = [
     image: "pilsner.jpg",
     alt: "Pilsner Beer",
     price: "$6.00",
+    rating: { average: 4.2 },
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ const mockApiData = [
     image: "stout.jpg",
     alt: "Stout Beer",
     price: "$7.00",
+    rating: { average: 4.8 },
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const mockApiData = [
     image: "wheat.jpg",
     alt: "Wheat Beer",
     price: "$3.00",
+    rating: { average: 4.3 },
   },
 ];
 
@@ -72,5 +77,17 @@ describe("FindYourBeer component", () => {
     expect(screen.queryByText("Pilsner Beer")).not.toBeInTheDocument();
     expect(screen.queryByText("Stout Beer")).not.toBeInTheDocument();
     expect(screen.queryByText("Wheat Beer")).not.toBeInTheDocument();
+  });
+
+  test("shows BeerCard when a beer is selected", () => {
+    const input = screen.getByPlaceholderText("Search for a beer...");
+    fireEvent.change(input, { target: { value: "lager" } });
+  
+    const lagerBeer = screen.getByText("Lager Beer");
+    fireEvent.click(lagerBeer);
+  
+    expect(screen.getByTestId("beer-title")).toHaveTextContent("Lager Beer");
+    expect(screen.getByTestId("beer-price")).toHaveTextContent("$4.00");  
+    expect(screen.getByTestId("beer-rating")).toHaveTextContent("4.00");
   });
 });

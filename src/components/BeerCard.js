@@ -23,11 +23,11 @@ function BeerCard({ beer }) {
         alt={beer.name}
         onError={handleImageError}
       />{" "}
-      <h3>{beer.name}</h3>
-      <p className="selected-beer-price">
-        <span>Price:</span> {beer.price}
+      <h3 data-testid="beer-title">{beer.name}</h3>
+      <p className="selected-beer-price" data-testid="beer-price">
+        <span >Price:</span> {beer.price}
       </p>
-      <p className="selected-beer-rating">
+      <p className="selected-beer-rating" data-testid="beer-rating">
         <span>Rating:</span> {beer.rating.average.toFixed(2)}
         {renderRatingStars(beer.rating.average)}
       </p>
